@@ -1,0 +1,11 @@
+.NavbarItems {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    direction: row;
+    background-color: #D2FDFF;
+}
+
+#signup {}
+
+#login {}
