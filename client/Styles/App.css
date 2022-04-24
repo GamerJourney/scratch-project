@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .App {
     background-color: #D2FDFF;
     display: grid;
@@ -16,3 +17,14 @@
     grid-column: 2/4;
 
 }
+=======
+* {
+    box-sizing: border-box;
+}
+
+#main{
+    display: flex;
+    flex-direction: row;
+}
+
+>>>>>>> d91de16ff8d379e5da32f96289dfd080915a40f5

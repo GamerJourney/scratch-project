@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from './Components/Navbar.jsx';
 import Sidebar from './Components/Sidebar.jsx';
 import Gameboard from './Components/Gameboard.jsx';
+import styles from './Styles/App.css';
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <>
         <div className='App'>
           <Navbar />
@@ -19,6 +21,15 @@ class App extends Component {
           <Gameboard />
         </div>
       </>
+=======
+      <div className="App">
+        <Navbar />
+        <div id="main">
+          <Sidebar />
+          <Gameboard />
+        </div>
+      </div>
+>>>>>>> d91de16ff8d379e5da32f96289dfd080915a40f5
     );
   }
 }
