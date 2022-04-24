@@ -13,6 +13,15 @@ class App extends Component {
 
   render() {
     return (
+<<<<<<< HEAD
+      <>
+        <div className='App'>
+          <Navbar />
+          <Sidebar />
+          <Gameboard />
+        </div>
+      </>
+=======
       <div className="App">
         <Navbar />
         <div id="main">
@@ -20,6 +29,7 @@ class App extends Component {
           <Gameboard />
         </div>
       </div>
+>>>>>>> d91de16ff8d379e5da32f96289dfd080915a40f5
     );
   }
 }

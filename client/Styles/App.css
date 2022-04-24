@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+.App {
+    background-color: #D2FDFF;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 50px auto;
+    gap: 10px;
+
+
+}
+
+.NavbarItems {
+    grid-column: 1/4;
+}
+
+.Gameboard {
+    grid-column: 2/4;
+
+}
+=======
 * {
     box-sizing: border-box;
 }
@@ -7,3 +27,4 @@
     flex-direction: row;
 }
 
+>>>>>>> d91de16ff8d379e5da32f96289dfd080915a40f5

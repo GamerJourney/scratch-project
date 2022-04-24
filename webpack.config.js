@@ -10,8 +10,17 @@ module.exports = {
   //   filename: 'index.html',
   //   publicPath: '/',
   // },
-  module:{
-    rules:[
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
+      },
+
+
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
@@ -27,7 +36,7 @@ module.exports = {
       },
     ],
   },
-  resolve:{
+  resolve: {
     extensions: ['.js', '.jsx'],
   },
   devtool: 'eval-source-map',
@@ -36,8 +45,8 @@ module.exports = {
       template: './client/index.html'
     }),
   ],
-  devServer:{
-    static:{
+  devServer: {
+    static: {
       directory: path.resolve(__dirname, 'client'),
       publicPath: '/',
     },
