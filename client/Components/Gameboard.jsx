@@ -7,9 +7,11 @@ import Header from './Header.jsx';
 function Gameboard() {
     return (
         <>
+        <div className="gameContainer">
             <div>Gameboard</div>
             <Card />
             <Header />
+        </div>
         </>
     )
 }
