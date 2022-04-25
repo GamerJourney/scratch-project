@@ -13,6 +13,7 @@ class App extends Component {
 
   render() {
     return (
+
       <>
         <div className='App'>
           <Navbar />
@@ -20,6 +21,7 @@ class App extends Component {
           <Gameboard />
         </div>
       </>
+
     );
   }
 }

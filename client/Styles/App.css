@@ -16,3 +16,10 @@
     grid-column: 2/4;
 
 }
+
+
+
+.sidebar {
+    grid-column: 1/1;
+}
+

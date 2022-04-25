@@ -9,7 +9,7 @@ function Card(props) {
     return (
         <>
             <img src="../Assets/Images/card_back.png" alt="" />
-            <img src="../Assets/Images/card_front.png" alt="" />
+
         </>
     )
 }
