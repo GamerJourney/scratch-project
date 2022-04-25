@@ -15,7 +15,7 @@ class App extends Component {
     return (
 
       <>
-        <div className='App'>
+        <div id='App'>
           <Navbar />
           <Sidebar />
           <Gameboard />

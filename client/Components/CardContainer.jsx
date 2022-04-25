@@ -12,11 +12,8 @@ function CardContainer(props) {
     }
 
     return (
-        <div className="CardContainer">
-
-            <div className="Cards">
-                {cardSet}
-            </div>
+        <div id="CardContainer">
+            {cardSet}
         </div>
     )
 }

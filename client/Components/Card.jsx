@@ -8,8 +8,9 @@ function Card(props) {
 
     return (
         <>
+        <div className="Card">
             <img src="../Assets/Images/card_back.png" alt="" />
-
+        </div>
         </>
     )
 }
