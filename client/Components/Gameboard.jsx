@@ -16,8 +16,39 @@ function shuffleArray(array) {
 }
 
 function Gameboard() {
+
+
     const [fName, setfName] = useState("firstName");
     const [lName, setlName] = useState("LastName");
+
+    // A card can be in 1 of 3 cardStatus
+    // HIDING - the card is not shown
+    // SHOWING - the card is shown but does not have a match yet
+    // MATCHING - the card is shown and has a match.
+    //            the card should never move from MATCHING to another state during
+
+    const cardStatus = ['HIDING', 'SHOWING', 'MATCHING'];
+
+
+    const cardSet = [];
+    //pass in the questions and answers below
+    const qNa = [
+        {
+            q: 'Question 1',
+            a: 'Answer 1'
+        },
+        {
+            q: 'Question 2',
+            a: 'Answer 2'
+        }
+    ]
+
+    for (let i = 0; i < qNa.length; i++) {
+        cardSet.push({ id: i, cardStatus: 'HIDING', cardContent: qNa[i].q, qnaSetId: 'qnaSet' + i });
+        cardSet.push({ id: i * 2, cardStatus: 'HIDING', cardContent: qNa[i].a, qnaSetId: 'qnaSet' + i })
+    }
+
+
     const initialState = {
 
 
