@@ -14,8 +14,37 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import GoogleLogin from 'react-google-login';
+import Regen from 'regenerator-runtime/runtime';
 
 const Login = (props) => {
+  const [loginData, setLoginData] = useState(
+    localStorage.getItem('loginData')
+      ? JSON.parse(localStorage.getItem('loginData'))
+      : null
+  );
+
+  const handleFailure = (result) => {
+    alert(result);
+  };
+  const handleLogin = async (googleData) => {
+    const res = await fetch('/api/google-login', {
+      method: 'Post',
+      body: JSON.stringify({
+        token: googleData.tokenId,
+      }),
+      headers: {
+        'content-Type': 'application/json',
+      },
+    });
+    const data = await res.json();
+    setLoginData(data);
+    localStorage.setItem('loginData', JSON.stringify(data));
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem('loginData');
+    setLoginData(null);
+  }
 
   const theme = createTheme();
 
@@ -27,13 +56,6 @@ const Login = (props) => {
       password: data.get('password'),
     });
   };
-
-  const handleFailure = (result) => {
-    alert(result);
-  };
-  const handleLogin = (googleData) => {
-
-  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -82,13 +104,22 @@ const Login = (props) => {
             >
               Sign In
             </Button>
-            <GoogleLogin
-              clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
-              buttonText="Log in with Google"
-              onSuccess={handleLogin}
-              onFailure={handleFailure}
-              cookiePolicy={'single_host_origin'}
-            ></GoogleLogin>
+            {
+              loginData ? (
+                <div>
+                  <h3>You are logged in as {loginData.email}</h3>
+                  <button onClick={handleLogout}>Logout</button>
+                </div>
+              ) : (
+                <GoogleLogin
+                  clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                  buttonText="Log in with Google"
+                  onSuccess={handleLogin}
+                  onFailure={handleFailure}
+                  cookiePolicy={'single_host_origin'}
+                ></GoogleLogin>
+              )
+            }
             <Grid container>
               <Grid item>
                 <Link href="#" variant="body2">

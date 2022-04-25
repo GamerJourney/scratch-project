@@ -12,7 +12,7 @@ module.exports = () => {
 
   return {
     mode: 'development',
-    entry: './client/index.js',
+    entry: ["regenerator-runtime/runtime.js", "./client/index.js"],
     // output:{
     //   path: path.resolve(__dirname, 'dist'),
     //   filename: 'index.html',
@@ -69,7 +69,7 @@ module.exports = () => {
           target: 'http://localhost:3000/',
           secure: false,
         },
-        '/auth/google/**': {
+        '/goole-login/**': {
           target: 'http://localhost:3000/',
           secure: false,
         }

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "proxy": "https://localhost:3000",
+  "proxy": "https://localhost:3000/",
   "scripts": {
     "start": "node server/server.js",
     "build": "cross-env NODE_ENV=production webpack",
@@ -60,6 +60,7 @@
     "react-dom": "^18.0.0",
     "react-google-login": "^5.2.2",
     "react-redux": "^8.0.1",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "regenerator-runtime": "^0.13.9"
   }
 }
