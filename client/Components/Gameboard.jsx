@@ -69,7 +69,7 @@ function Gameboard() {
 
     return (
         <>
-            <div style={{ backgroundImage: `url(${gbImage})`, backgroundRepeat: "no-repeat", backgroundSize: "contain", height: '600px', width: '100%' }} className='Gameboard' >Gameboard
+            <div id="Gameboard">Gameboard
                 <Header />
                 <CardContainer />
             </div>
