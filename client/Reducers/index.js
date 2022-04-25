@@ -5,12 +5,14 @@ import { combineReducers } from 'redux';
 // import all reducers here
 
 import gameReducer from './gameReducer.js';
+import authReducer from './authReducer.js'
 
 
 // combine reducers
 const reducers = combineReducers({
   // if we had other reducers, they would go here
-  game: gameReducer,
+  // game: gameReducer,
+  auth: authReducer,
 });
 
 // make the combined reducers available for import
