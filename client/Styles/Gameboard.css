@@ -1,1 +1,4 @@
-#Gameboard {}
+.Gameboard {
+    border-color: blue;
+    border-style: dashed;
+}

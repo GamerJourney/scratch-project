@@ -8,9 +8,9 @@ import styles from '../Styles/Sidebar.css';
 
 function Sidebar() {
     return (
-        <div className="sidebar">
-            <Button id="discover" variant="contained">Discover Sets</Button>
-            <Button id="create" variant="contained">Create Your Own</Button>
+        <div id="Sidebar">
+            <Button className="sbButton" id="discover" variant="contained">Discover Sets</Button>
+            <Button className="sbButton" id="create" variant="contained">Create Your Own</Button>
         </div>
     )
 }

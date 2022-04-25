@@ -1,4 +1,4 @@
-.App {
+/* .App {
     background-color: #D2FDFF;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -6,13 +6,91 @@
     gap: 10px;
 
 
+} */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-.NavbarItems {
+#App{
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 50px 1fr;
+    height: 100vh;
+    width: 100vw;
+    background-color:#D2FDFF;
+    column-gap: 10px;
+}
+
+#App > #NavbarItems{
     grid-column: 1/4;
+    grid-row: 1;
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    direction: row;
+    background-color: #D2FDFF;
 }
 
-.Gameboard {
-    grid-column: 2/4;
+#App > #Sidebar{
+    grid-column: 1;
+    grid-row: 2;
+    width: 200px;
+    height: 100%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block: 10px;
+    padding-inline: 5px;
+}
+
+#Sidebar > .sbButton{
+    width: 100%;
+    margin: 10px;
+}
+
+#App > #Gameboard{
+    grid-column: 2/3;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    min-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Gameboard > #CardContainer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(114, 202, 253, .7);
+    border: 10px #fff solid;
+    border-radius: 20px;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .5));
+    margin-bottom: 10px;
+    flex-shrink: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: space-between;
+    
+}
+
+#CardContainer > .Card{
+    flex: 1 0 21%;
+
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
 }

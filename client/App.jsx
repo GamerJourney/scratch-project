@@ -16,14 +16,16 @@ class App extends Component {
   render() {
 
     return (
+
       <>
-        <div className='App'>
+        <div id='App'>
           <Navbar />
           <Sidebar />
           <Gameboard />
           {/* <Login></Login> */}
         </div>
       </>
+
     );
   }
 }
