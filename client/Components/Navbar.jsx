@@ -15,8 +15,7 @@ function Navbar(props) {
     const handleClose = () => setOpen(false);
 
     return (
-        <nav className="NavbarItems">
-            <Button className='navButton' variant="outlined" id="signup" onClick={() => setSignupModal(1)}>Sign Up</Button>
+
         <nav id="NavbarItems">
             <Button className='navButton' variant="outlined" id="signup">Sign Up</Button>
             <img src='../Assets/Images/logo_banner.png' width='200' height='50'></img>

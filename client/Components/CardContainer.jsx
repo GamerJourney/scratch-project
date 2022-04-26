@@ -5,15 +5,14 @@ import Card from './Card'
 import Styles from '../Styles/CardContainer.css'
 function CardContainer(props) {
 
-    const cardSet = [];
-    const cardNum = 16; //this can be a variable defined by user selection
-    for (let i = 0; i < cardNum; i++) {
-        cardSet.push(<Card />);
-    }
+
 
     return (
-        <div id="CardContainer">
-            {cardSet}
+        <div className="CardContainer">
+
+            <div className="Cards">
+                {cardSet}
+            </div>
         </div>
     )
 }

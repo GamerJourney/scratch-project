@@ -2,19 +2,37 @@
 
 import React from 'react';
 
-function Card(props) {
+const Card = (props) => {
+    const { card, flipcard } = props;
 
-    //props contain 1) card back or card front; 2) question/answer on card front
+    if (card.cardStatus === 'SHOWING' || 'MATCHING') {
+        const cardClass = "flip-back";
+    } else {
+        const cardClass = "flip-front";
+    }
 
+    // how to render something different based on the cardClass?
     return (
-        <>
-        <div className="Card">
-            <img src="../Assets/Images/card_back.png" alt="" />
-        </div>
-        </>
+        <li className="flip-container">
+            <div className={cardClass}>
+                <div className="flip-front" onClick={() => flipCard(card.id)}></div>
+                <div className="flip-back"><img src="../Assets/Images/card_back.png" alt="" /></div>
+            </div>
+        </li>
     )
 }
 
 export default Card;
 
+/*
+    id: qNa.length + i,
+    cardStatus: 'Hiding',/'Showing'/'Matching'
+    cardContent: qNa[i].a,
+    qnaSetId: 'qnaSet' + i,
+    noClick: false,
+*/
 
+// let cardClass = classNames({
+//     'noClick': true,
+
+// })

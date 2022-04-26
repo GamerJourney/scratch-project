@@ -8,23 +8,23 @@
 
 } */
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-#App{
+#App {
     display: grid;
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 50px 1fr;
     height: 100vh;
     width: 100vw;
-    background-color:#D2FDFF;
+    background-color: #D2FDFF;
     column-gap: 10px;
 }
 
-#App > #NavbarItems{
+#App>#NavbarItems {
     grid-column: 1/4;
     grid-row: 1;
     width: 100%;
@@ -37,7 +37,7 @@
     background-color: #D2FDFF;
 }
 
-#App > #Sidebar{
+#App>#Sidebar {
     grid-column: 1;
     grid-row: 2;
     width: 200px;
@@ -51,12 +51,12 @@
     padding-inline: 5px;
 }
 
-#Sidebar > .sbButton{
+#Sidebar>.sbButton {
     width: 100%;
     margin: 10px;
 }
 
-#App > #Gameboard{
+#App>#Gameboard {
     grid-column: 2/3;
     grid-row: 2;
     width: 100%;
@@ -69,7 +69,7 @@
     align-items: center;
 }
 
-#Gameboard > #CardContainer{
+#Gameboard>#CardContainer {
     width: 100%;
     height: 100%;
     background-color: rgba(114, 202, 253, .7);
@@ -82,10 +82,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: space-between;
-    
+
 }
 
-#CardContainer > .Card{
+#CardContainer>.Card {
     flex: 1 0 21%;
 
     display: flex;
