@@ -6,17 +6,17 @@ const Card = (props) => {
     const { card, flipcard } = props;
 
     if (card.cardStatus === 'SHOWING' || 'MATCHING') {
-        const cardClass = "flip-back";
-    } else {
         const cardClass = "flip-front";
+    } else {
+        const cardClass = "flip-back";
     }
 
     // how to render something different based on the cardClass?
     return (
         <li className="flip-container">
             <div className={cardClass}>
-                <div className="flip-front" onClick={() => flipCard(card.id)}></div>
-                <div className="flip-back"><img src="../Assets/Images/card_back.png" alt="" /></div>
+                <div onClick={() => flipCard(card.id)}></div>
+                {/* <div className="flip-back"><img src="../Assets/Images/card_back.png" alt="" /></div> */}
             </div>
         </li>
     )
